@@ -110,7 +110,7 @@ async def next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⬅️ 𝘽𝙖𝙘𝙠", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"❄️ 𝙋𝙖𝙜𝙚{math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]
+             InlineKeyboardButton(f"❄️ 𝙋𝙖𝙜𝙚 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
@@ -119,9 +119,9 @@ async def next_page(bot, query):
     else:
         btn.append(
             [
-                InlineKeyboardButton("⬅️", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("⬅️ 𝘽𝙖𝙘𝙠", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"❄️ {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("➡️", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("𝙉𝙚𝙭𝙩 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     
