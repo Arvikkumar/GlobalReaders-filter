@@ -50,7 +50,7 @@ async def pm_next_page(bot, query):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
 
-    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "howdl")])
+    btn.insert(0, [InlineKeyboardButton("📚", "howdl")])
     if 0 < offset <= 10: off_set = 0
     elif offset == 0: off_set = None
     else: off_set = offset - 10
@@ -85,7 +85,7 @@ async def pm_spoll_tester(bot, query):
     if not movies:
         return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ...')
+    await query.answer('𝘾𝙝𝙚𝙘𝙠𝙞𝙣𝙜 𝙛𝙤𝙧 𝙚𝙗𝙤𝙤𝙠𝙨 𝙞𝙣 𝙙𝙖𝙩𝙖𝙗𝙖𝙨𝙚...')
     files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
     if files:
         k = (movie, files, offset, total_results)
@@ -124,7 +124,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{file.file_id}')] for file in files ]    
 
-    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "howdl")])
+    btn.insert(0, [InlineKeyboardButton("📚", "howdl")])
     if offset != "":
         key = f"{message.id}"
         temp.PM_BUTTONS[key] = search
@@ -177,7 +177,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʀᴇ Is Wʜᴀᴛ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}"
+        cap = f"𝙃𝙚𝙧𝙚 𝙞𝙨 𝙬𝙝𝙖𝙩 𝙄 𝙛𝙤𝙪𝙣𝙙 𝙛𝙤𝙧 𝙮𝙤𝙪𝙧 𝙦𝙪𝙚𝙧𝙮 {search}"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, quote=True, reply_markup=InlineKeyboardMarkup(btn))
@@ -209,7 +209,7 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏ Mᴏᴠɪᴇ Iɴ Tʜᴀᴛ Nᴀᴍᴇ", quote=True)
+        k = await msg.reply("𝙄 𝙘𝙤𝙪𝙡𝙙𝙣'𝙩 𝙛𝙞𝙣𝙙 𝙖𝙣𝙮 𝙚𝙗𝙤𝙤𝙠 𝙞𝙣 𝙩𝙝𝙖𝙩 𝙣𝙖𝙢𝙚", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -231,13 +231,13 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Cʜᴇᴄᴋ Yᴏᴜʀ Sᴘᴇʟʟɪɴɢ", quote=True)
+        k = await msg.reply("𝙄 𝙘𝙤𝙪𝙡𝙙𝙣'𝙩 𝙛𝙞𝙣𝙙 𝙖𝙣𝙮𝙩𝙝𝙞𝙣𝙜 𝙧𝙚𝙡𝙖𝙩𝙚𝙙 𝙩𝙤 𝙩𝙝𝙖𝙩. 𝙘𝙝𝙚𝙘𝙠 𝙮𝙤𝙪𝙧 𝙨𝙥𝙚𝙡𝙡𝙞𝙣𝙜", quote=True)
         await asyncio.sleep(10)
         return await k.delete()
     temp.PM_SPELL[str(msg.id)] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
+    await msg.reply("𝙄 𝙘𝙤𝙪𝙡𝙙𝙣'𝙩 𝙛𝙞𝙣𝙙 𝙖𝙣𝙮𝙩𝙝𝙞𝙣𝙜 𝙧𝙚𝙡𝙖𝙩𝙚𝙙 𝙩𝙤 𝙩𝙝𝙖𝙩 𝙙𝙞𝙙 𝙮𝙤𝙪 𝙢𝙚𝙖𝙣 𝙖𝙣𝙮 𝙤𝙣𝙚 𝙤𝙛 𝙩𝙝𝙚𝙨𝙚?", reply_markup=InlineKeyboardMarkup(btn), quote=True)
 
 
 
