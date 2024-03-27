@@ -1,4 +1,4 @@
-import re, time
+,import re, time
 from os import environ
 from Script import script 
 
@@ -59,7 +59,7 @@ SHORT_API = environ.get("SHORT_API")
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1002039066656'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'GlobalReaders09')
-P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
+P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "False"), False)
 PM_IMDB = is_enabled(environ.get('PM_IMDB', "False"), False)
 IMDB = is_enabled(environ.get('IMDB', "False"), False)
 SINGLE_BUTTON = is_enabled(environ.get('SINGLE_BUTTON', "True"), True)
