@@ -90,7 +90,7 @@ async def pm_spoll_tester(bot, query):
         k = (movie, files, offset, total_results)
         await pm_AutoFilter(bot, query, k)
     else:
-        k = await query.message.edit('𝙏𝙝𝙞𝙨 𝙚𝙗𝙤𝙤𝙠 𝙞𝙨𝙣'𝙩 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙧𝙞𝙜𝙝𝙩 𝙣𝙤𝙬')
+        k = await query.message.edit("𝙏𝙝𝙞𝙨 𝙚𝙗𝙤𝙤𝙠 𝙞𝙨 𝙣𝙤𝙩 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙧𝙞𝙜𝙝𝙩 𝙣𝙤𝙬")
         await asyncio.sleep(10)
         await k.delete()
 
