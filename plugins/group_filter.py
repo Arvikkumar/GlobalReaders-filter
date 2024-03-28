@@ -142,7 +142,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer("Yᴏᴜ Aʀᴇ Usɪɴɢ Oɴᴇ Oғ Mʏ Oʟᴅ Mᴇssᴀɢᴇs, Pʟᴇᴀsᴇ Sᴇɴᴅ Tʜᴇ Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('Checking for Movie in database...')
+    await query.answer('𝘾𝙝𝙚𝙘𝙠𝙞𝙣𝙜 𝙛𝙤𝙧 𝙚𝙗𝙤𝙤𝙠 𝙞𝙣 𝙙𝙖𝙩𝙖𝙗𝙖𝙨𝙚...')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -150,7 +150,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('𝙏𝙝𝙞𝙨 𝙚𝙗𝙤𝙤𝙠 𝙞𝙨𝙣'𝙩 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙧𝙞𝙜𝙝𝙩 𝙣𝙤𝙬')
             await asyncio.sleep(10)
             await k.delete()
 
