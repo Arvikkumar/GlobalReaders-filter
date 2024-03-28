@@ -33,7 +33,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            InlineKeyboardButton("🔎", switch_inline_query_current_chat='')
         ]]
         m = await message.reply_sticker("CAACAgIAAxkBAAIXUGYD5eTgn08B3sSILFrRW-MJaA0eAAJROAAChp3wSBTCIy8PUDoTNAQ") 
         await asyncio.sleep(2)
@@ -46,7 +46,7 @@ async def start(client, message):
         except ChatAdminRequired:
             logger.error("MAKE SURE BOT IS ADMIN IN FORCESUB CHANNEL")
             return
-        btn = [[InlineKeyboardButton("𝙅𝙤𝙞𝙣 𝙩𝙝𝙞𝙨 𝙘𝙝𝙖𝙣𝙣𝙚𝙡 ✨", url=invite_link.invite_link)]]
+        btn = [[InlineKeyboardButton(" 𝙊𝙪𝙧 𝙘𝙝𝙖𝙣𝙣𝙚𝙡 ✨", url=invite_link.invite_link)]]
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
@@ -63,7 +63,7 @@ async def start(client, message):
         
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat='')
+            InlineKeyboardButton("🔎", switch_inline_query_current_chat='')
         ]]
         m = await message.reply_sticker("CAACAgIAAxkBAAIXUGYD5eTgn08B3sSILFrRW-MJaA0eAAJROAAChp3wSBTCIy8PUDoTNAQ")
         await asyncio.sleep(2)
