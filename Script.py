@@ -217,7 +217,12 @@ Fʀᴇᴇ Dɪꜱᴋ: {}"""
 𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙏𝙤 {chat} 😼.
 
 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙀𝙗𝙤𝙤𝙠𝙨, 𝙎𝙝𝙖𝙧𝙚 & 𝙎𝙪𝙥𝙥𝙤𝙧𝙩"""
-  
+
+    CUSTOM_FILE_CAPTION = """type here
+
+{file_name} test
+𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙀𝙗𝙤𝙤𝙠𝙨, 𝙎𝙝𝙖𝙧𝙚 & 𝙎𝙪𝙥𝙥𝙤𝙧𝙩"""
+
     IMDB_TEMPLATE = """<b>Qᴜᴇʀʏ: {query}</b>
 
 🏷 Tɪᴛʟᴇ: <a href={url}>{title}</a>
