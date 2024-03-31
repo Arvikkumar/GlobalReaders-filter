@@ -21,7 +21,7 @@ PICS = (environ.get('PICS' ,'https://graph.org/file/3885d663a3160428432d5.jpg'))
 UPTIME = time.time()
 
 # Admins, Channels & Users
-CACHE_TIME = int(environ.get('CACHE_TIME', 120))
+CACHE_TIME = int(environ.get('CACHE_TIME', 60))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5521072874').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002041457406').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
@@ -58,7 +58,8 @@ SHORT_API = environ.get("SHORT_API")
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1002039066656'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'GR_094')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+CDDuHV4tmzRlMWMx')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+4LyfiVIU4lkzNzYx')
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
 PM_IMDB = is_enabled(environ.get('PM_IMDB', "False"), False)
 IMDB = is_enabled(environ.get('IMDB', "False"), False)
