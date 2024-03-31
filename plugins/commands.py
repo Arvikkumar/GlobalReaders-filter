@@ -17,9 +17,9 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('📢 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 📢', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('📢 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 📢', url=f'https://t.me/+E1IlMOJe3hE0MzRh}')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙃𝙚𝙡𝙥 ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
+            InlineKeyboardButton('ℹ️ 𝙃𝙚𝙡𝙥 ℹ️', url=f"https://t.me/+PHP6cwXLeu03YTYx")
         ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
