@@ -218,7 +218,7 @@ Fʀᴇᴇ Dɪꜱᴋ: {}"""
 
 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙀𝙗𝙤𝙤𝙠𝙨, 𝙎𝙝𝙖𝙧𝙚 & 𝙎𝙪𝙥𝙥𝙤𝙧𝙩"""
 
-    CUSTOM_FILE_CAPTION = """@GlobalReaders09
+    CUSTOM_FILE_CAPTION = """𝙂𝙡𝙤𝙗𝙖𝙡𝙍𝙚𝙖𝙙𝙚𝙧𝙨 📚
 
 {file_name} test"""
 
