@@ -33,7 +33,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton("🔎", switch_inline_query_current_chat='')
+            InlineKeyboardButton("𝘾𝙝𝙖𝙣𝙣𝙚𝙡 🔈", url="https://t.me/+N4n_UbZ4hPY2MzYx")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAIXsGYJifFdp4CuZLIMZ4PnuU_BTJf0AAKtBgACLvmwVjvF80vTqdhMNAQ") 
         await asyncio.sleep(2)
